@@ -1,4 +1,6 @@
 version: "2.1"
+volumes:
+  jupyter:
 services:
   ad-block:
     build:
@@ -6,5 +8,7 @@ services:
     restart: always
     privileged: true
     #image: ghcr.io/rcooke-warwick/hardware-debug-block:latest
+    volumes:
+      - "jupyter:/data"
     ports:
       - "80:8888"

@@ -1,4 +1,6 @@
 #!/bin/sh
 echo "Starting jupyter notebook..."
 
-jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
+cp test.ipynb /data
+cd /data
+jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser --NotebookApp.token='' --NotebookApp.password=''

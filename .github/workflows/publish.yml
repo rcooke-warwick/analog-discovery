@@ -2,13 +2,13 @@ name: Build and publish container
 
 on:
   push:
-    branches: [master,main]
+    branches: [master, main]
   workflow_dispatch:
     inputs:
       reason:
-        description: 'Why ?'
+        description: "Why ?"
         required: false
-        default: ''
+        default: ""
 
 jobs:
   ghr_push:
@@ -43,4 +43,4 @@ jobs:
           # Build and Publish container image
           docker buildx build --push \
           --tag $IMAGE_ID:$VERSION \
-          --platform linux/amd64,linux/arm/v7,linux/arm64 .
+          --platform linux/arm64 .
