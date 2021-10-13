@@ -1,0 +1,10 @@
+version: "2.1"
+services:
+  ad-block:
+    build:
+      context: .
+    restart: always
+    privileged: true
+    #image: ghcr.io/rcooke-warwick/hardware-debug-block:latest
+    ports:
+      - "80:8888"

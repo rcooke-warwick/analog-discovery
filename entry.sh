@@ -1,4 +1,4 @@
 #!/bin/sh
-echo "Ready to start - try something"
+echo "Starting jupyter notebook..."
 
-sleep infinity
+jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
