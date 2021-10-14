@@ -3,12 +3,11 @@ volumes:
   jupyter:
 services:
   ad-block:
-    build:
-      context: .
     restart: always
-    privileged: true
-    #image: ghcr.io/rcooke-warwick/hardware-debug-block:latest
+    build: .
     volumes:
       - "jupyter:/data"
     ports:
-      - "80:8888"
+      - "8080:5900"
+
+
