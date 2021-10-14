@@ -2,7 +2,7 @@ FROM debian:latest
 
 # Update and install necessary packages
 RUN apt-get update && apt-get dist-upgrade --yes
-RUN apt-get install -y wget libqt5script5 libusb-1.0-0 xdg-utils libqt5multimedia5-plugins libqt5scripttools5 libqt5network5 x11vnc x11-utils xvfb wmctrl supervisor
+RUN apt-get install -y wget libqt5script5 libusb-1.0-0 xdg-utils procps libqt5multimedia5-plugins libqt5scripttools5 libqt5network5 x11vnc x11-utils xvfb wmctrl supervisor
 
 # Fix for xdg-desktop-menu error
 # Source: https://askubuntu.com/questions/405800/installation-problem-xdg-desktop-menu-no-writable-system-menu-directory-found
@@ -32,7 +32,7 @@ RUN rm arch
 WORKDIR /usr/app
 # Install Python3 and DWF library to automate waveforms operations
 RUN apt-get install -y python3 python3-pip python3-dev
-RUN pip3 install pytest xunitparser dwf jupyter
+RUN pip3 install pytest xunitparser dwf jupyter matplotlib
 COPY wave.py .
 COPY entry.sh .
 RUN chmod +x entry.sh

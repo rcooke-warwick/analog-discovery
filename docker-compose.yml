@@ -5,9 +5,11 @@ services:
   ad-block:
     restart: always
     build: .
+    privileged: true
     volumes:
       - "jupyter:/data"
     ports:
       - "8080:5900"
+      - "80:8888"
 
 
