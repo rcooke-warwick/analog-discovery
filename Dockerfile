@@ -33,7 +33,9 @@ WORKDIR /usr/app
 # Install Python3 and DWF library to automate waveforms operations
 RUN apt-get install -y python3 python3-pip python3-dev
 RUN pip3 install pytest xunitparser dwf jupyter matplotlib
-COPY wave.py .
+COPY analogue-example.ipynb .
+COPY digital-example.ipynb .
+
 COPY entry.sh .
 RUN chmod +x entry.sh
 
