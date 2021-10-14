@@ -14,6 +14,6 @@ assets:
     data:
       url: 'https://raw.githubusercontent.com/rcooke-warwick/ad-block/master/docs/images/icon.png'
 data:
-  defaultDeviceType: raspberrypi4
+  defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
-    - raspberrypi4
+    - raspberrypi4-64
