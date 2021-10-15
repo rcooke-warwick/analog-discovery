@@ -2,7 +2,7 @@ version: "2.1"
 volumes:
   jupyter:
 services:
-  analog-discovery-block:
+  analog-discovery:
     restart: always
     build: .
     privileged: true

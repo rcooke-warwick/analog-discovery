@@ -10,7 +10,7 @@
 
 Use this as standalone with the button below:
 
-[![template block deploy with balena](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/rcooke-warwick/analog-discovery-block)
+[![template block deploy with balena](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/rcooke-warwick/analog-discovery)
 
 Or add the following service to your `docker-compose.yml`:
 
@@ -19,9 +19,9 @@ version: "2.1"
 volumes:
   jupyter:
 services:
-  analog-discovery-block:
+  analog-discovery:
     restart: always
-    image: ghcr.io/rcooke-warwick/analog-discovery-block:latest
+    image: ghcr.io/rcooke-warwick/analog-discovery:latest
     privileged: true
     volumes:
       - "jupyter:/data"
