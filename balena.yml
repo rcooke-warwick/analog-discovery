@@ -1,6 +1,6 @@
 name: analog-discovery
 description: >-
-  Block enabling users to interface with Analog Discovery 2 remotely
+  Block enabling users to interface with Analog Discovery 2 remotely via a VNC client or SDK (Jupyter Notebooks)
 fleetcta: analog discovery 2 balenablock
 version: 0.0.1
 type: sw.application
@@ -17,3 +17,6 @@ data:
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
     - raspberrypi4-64
+    - raspberrypi400-64
+    - etcher-pro
+    - intel-nuc

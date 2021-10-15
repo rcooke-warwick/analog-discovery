@@ -43,4 +43,4 @@ jobs:
           # Build and Publish container image
           docker buildx build --push \
           --tag $IMAGE_ID:$VERSION \
-          --platform linux/arm64 .
+          --platform linux/amd64,linux/arm64 .
