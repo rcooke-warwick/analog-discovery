@@ -8,11 +8,11 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: "https://github.com/rcooke-warwick/ad-block"
+      url: "https://github.com/rcooke-warwick/analog-discovery-block"
   logo:
     type: blob.asset
     data:
-      url: "https://raw.githubusercontent.com/rcooke-warwick/ad-block/master/docs/images/icon.png"
+      url: "https://raw.githubusercontent.com/rcooke-warwick/analog-discovery-block/master/docs/images/icon.png"
 data:
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
