@@ -8,11 +8,11 @@ RUN apt-get install -y wget libqt5script5 libusb-1.0-0 xdg-utils procps libqt5mu
 # Source: https://askubuntu.com/questions/405800/installation-problem-xdg-desktop-menu-no-writable-system-menu-directory-found
 RUN mkdir /usr/share/desktop-directories/
 
-#ARG TARGETPLATFORM
-#RUN echo "building for $TARGETPLATFORM"
-#RUN if [ $TARGETPLATFORM = "linux/arm64" ]; then echo "arm64" > arch; elif [ $TARGETPLATFORM = "linux/arm/v7" ]; then echo "armhf" > arch; else echo "amd64" > arch; fi;
+ARG TARGETPLATFORM
+RUN echo "building for $TARGETPLATFORM"
+RUN if [ $TARGETPLATFORM = "linux/arm64" ]; then echo "arm64" > arch; elif [ $TARGETPLATFORM = "linux/arm/v7" ]; then echo "armhf" > arch; else echo "amd64" > arch; fi;
 # Set the OS version to pull the debian packages from (using a "variable file")
-RUN echo "arm64" > arch;
+# RUN echo "arm64" > arch;
 
 # Get the Adept and Waveforms installers
 RUN wget https://digilent.s3-us-west-2.amazonaws.com/Software/Adept2+Runtime/2.21.3/digilent.adept.runtime_2.21.3-$(cat arch).deb
